@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>RegisterUser</servlet-name>
+        <servlet-class>main.java.servlets.RegisterUser</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LoginUser</servlet-name>
+        <servlet-class>main.java.servlets.LoginUser</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TestShowcase</servlet-name>
+        <servlet-class>main.java.servlets.TestShowcase</servlet-class>
+    </servlet>
+
+    <filter-mapping>
+    <filter-name>PremiumFilter</filter-name>
+    <url-pattern>/premium.jsp</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>Premium</servlet-name>
+        <servlet-class>main.java.servlets.Premium</servlet-class>
+    </servlet>
+
+    <filter>
+    <filter-name>PremiumFilter</filter-name>
+    <filter-class>main.java.servlets.Filters.PremiumFilter</filter-class>
+    </filter>
+
+    <servlet>
+        <servlet-name>RegisterAddress</servlet-name>
+        <servlet-class>main.java.servlets.RegisterAddress</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegisterUser</servlet-name>
+        <url-pattern>/RegisterUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginUser</servlet-name>
+        <url-pattern>/LoginUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TestShowcase</servlet-name>
+        <url-pattern>/TestShowcase</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Premium</servlet-name>
+        <url-pattern>/Premium</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RegisterAddress</servlet-name>
+        <url-pattern>/RegisterAddress</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
